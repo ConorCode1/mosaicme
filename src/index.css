@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
   font-family: "Manrope", sans-serif;
@@ -7,15 +7,36 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   min-width: 320px;
 }
-
 button,
 input,
 textarea,
 select {
   font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button,
+summary,
+a {
+  touch-action: manipulation;
+}
+::selection {
+  background: #f7c1b4;
+  color: #151515;
 }
