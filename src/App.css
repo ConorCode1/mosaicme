@@ -1,13 +1,19 @@
 :root {
-  --paper: #f5f3ec;
-  --paper-dark: #ebe7dc;
+  --paper: #f8f3ed;
+  --paper-dark: #f1e6dc;
   --ink: #151515;
-  --muted: #62625d;
-  --accent: #ef5b3f;
-  --accent-hover: #e84e32;
-  --accent-text: #b43f29;
-  --line: #d9d6cc;
-  --white: #ffffff;
+  --muted: #60615a;
+  --accent: #cc664f;
+  --accent-text: #a34734;
+  --green: #233b2b;
+  --green-hover: #172b1f;
+  --peach: #f7dfcf;
+  --line: #ded5cb;
+  --white: #fffaf5;
+}
+::selection {
+  background: var(--peach);
+  color: var(--ink);
 }
 html {
   scroll-behavior: smooth;
@@ -16,6 +22,9 @@ html {
 body {
   background: var(--paper);
   color: var(--ink);
+}
+.site {
+  overflow-x: clip;
 }
 a {
   color: inherit;
@@ -102,21 +111,21 @@ h3 {
     color 0.18s ease;
 }
 .button-accent {
-  background: var(--accent);
-  color: var(--ink);
+  background: var(--green);
+  color: var(--white);
 }
 .button-accent:hover {
-  background: var(--accent-hover);
+  background: var(--green-hover);
 }
 .button-dark {
-  background: var(--ink);
+  background: var(--green);
   color: var(--white);
 }
 .button-dark:hover {
-  background: #363633;
+  background: var(--green-hover);
 }
 .button-outline {
-  border-color: #aaa79e;
+  border-color: #a49b90;
 }
 .button-outline:hover {
   background: var(--paper-dark);
@@ -192,9 +201,37 @@ h3 {
   line-height: 1.6;
 }
 .hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   gap: 30px;
   padding-block: 36px 42px;
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.hero::before {
+  top: -82px;
+  right: -132px;
+  width: 200px;
+  height: 300px;
+  border-radius: 48% 0 0 72%;
+  transform: rotate(-26deg);
+  background: #f8e7dc;
+}
+.hero::after {
+  top: 178px;
+  right: -109px;
+  width: 130px;
+  height: 210px;
+  border-radius: 65% 45% 55% 40%;
+  transform: rotate(-43deg);
+  background: var(--peach);
+  opacity: 0.72;
 }
 .hero h1 {
   max-width: 640px;
@@ -228,7 +265,7 @@ h3 {
   overflow: hidden;
   background: var(--paper-dark);
   aspect-ratio: 1.12;
-  border-radius: 4px;
+  border-radius: 9px;
 }
 .hero-image-frame img {
   width: 100%;
@@ -257,7 +294,7 @@ h3 {
   max-width: 990px;
 }
 .experience .eyebrow {
-  color: #f68b75;
+  color: #e7aa90;
 }
 .experience h2 {
   max-width: 900px;
@@ -265,7 +302,7 @@ h3 {
 .experience p:last-child {
   max-width: 700px;
   margin-top: 25px;
-  color: #c9c9c3;
+  color: #d6d0c8;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -291,7 +328,7 @@ h3 {
   aspect-ratio: 1.45;
   overflow: hidden;
   background: var(--paper-dark);
-  border-radius: 3px;
+  border-radius: 8px;
 }
 .step-photo img {
   width: 100%;
@@ -337,8 +374,8 @@ h3 {
 .wedding-image {
   aspect-ratio: 1.15;
   overflow: hidden;
-  border-radius: 3px;
-  background: #dcd8ce;
+  border-radius: 9px;
+  background: var(--peach);
 }
 .wedding-image img {
   width: 100%;
@@ -376,7 +413,7 @@ h3 {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  border-radius: 4px;
+  border-radius: 9px;
   background: var(--paper-dark);
 }
 .carousel-track::-webkit-scrollbar {
@@ -439,7 +476,7 @@ h3 {
   background: #b3afa5;
 }
 .carousel-dot[aria-pressed="true"] span {
-  background: var(--ink);
+  background: var(--green);
 }
 .digital-enquiry {
   width: 100%;
@@ -552,7 +589,7 @@ details[open] > summary .toggle-symbol::after {
   max-width: 940px;
 }
 .contact-section .eyebrow {
-  color: #f68b75;
+  color: #e7aa90;
 }
 .contact-section h2 {
   max-width: 900px;
@@ -561,19 +598,24 @@ details[open] > summary .toggle-symbol::after {
 .contact-inner > p:not(.eyebrow) {
   max-width: 560px;
   margin-top: 24px;
-  color: #c9c9c3;
+  color: #d6d0c8;
   font-size: 15px;
   line-height: 1.8;
 }
 .contact-inner > .button {
   margin-top: 27px;
+  background: var(--paper);
+  color: var(--green);
+}
+.contact-inner > .button:hover {
+  background: var(--peach);
 }
 .contact-email {
   display: block;
   width: fit-content;
   max-width: 100%;
   margin-top: 24px;
-  color: #d3d3cd;
+  color: #d6d0c8;
   font-size: 13px;
   line-height: 1.7;
   overflow-wrap: anywhere;
@@ -655,6 +697,15 @@ details[open] > summary .toggle-symbol::after {
   .hero {
     padding-block: 48px;
     gap: 35px;
+  }
+  .hero::before {
+    right: -124px;
+    width: 240px;
+    height: 350px;
+  }
+  .hero::after {
+    top: 210px;
+    right: -101px;
   }
   .hero h1 {
     font-size: 64px;
@@ -762,6 +813,18 @@ details[open] > summary .toggle-symbol::after {
     align-items: center;
     gap: 58px;
     padding-block: 58px 64px;
+  }
+  .hero::before {
+    top: -105px;
+    right: -180px;
+    width: 360px;
+    height: 430px;
+  }
+  .hero::after {
+    top: 340px;
+    right: -140px;
+    width: 180px;
+    height: 270px;
   }
   .hero h1 {
     font-size: clamp(58px, 5.7vw, 82px);
@@ -983,11 +1046,12 @@ details[open] > summary .toggle-symbol::after {
   gap: 8px;
   min-height: 44px;
   padding: 9px 13px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--green);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
   white-space: nowrap;
+  color: var(--green);
 }
 .instagram-link svg {
   width: 18px;
@@ -995,14 +1059,17 @@ details[open] > summary .toggle-symbol::after {
   flex: 0 0 18px;
 }
 .instagram-link:hover {
-  background: #fbe5dc;
-  color: var(--ink);
+  background: var(--green);
+  color: var(--white);
 }
 .nav-links .instagram-link {
   align-self: flex-start;
   margin-top: 14px;
   padding: 9px 13px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--green);
+}
+.nav-links .instagram-link:hover {
+  color: var(--white);
 }
 .instagram-footer {
   margin-top: 18px;
@@ -1032,7 +1099,7 @@ details[open] > summary .toggle-symbol::after {
   background: var(--white);
   border: 1px solid var(--line);
   border-top: 3px solid var(--accent);
-  border-radius: 5px;
+  border-radius: 9px;
 }
 .price-card h3 {
   font-size: 23px;
