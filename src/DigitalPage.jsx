@@ -137,9 +137,9 @@ export default function DigitalPage() {
             <span>One bigger picture.</span>
           </h1>
           <p className="digital-product-intro">
-            Your favourite photos, brought together to form a larger portrait. A
-            personal gift for an engagement, wedding or anniversary, filled with
-            the moments that make it theirs.
+            We turn your favourite photos into one incredible portrait, with a
+            memory in every detail. The perfect gift for engagements, weddings,
+            birthdays and anniversaries.
           </p>
           <div className="digital-product-actions">
             <a href={digitalOrder} className="button button-dark">
