@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./App.css";
+import { EMAIL, INSTAGRAM_URL, emailLink } from "./siteConfig.js";
 import heroMosaic from "./assets/images/hero-mosaic.jpg";
 import finalMosaic from "./assets/images/final-mosaic.jpg";
 import guestTakingPhoto from "./assets/images/guest-taking-photo.jpg";
@@ -7,9 +8,6 @@ import tilePrinting from "./assets/images/tile-printing.jpg";
 import guestPlacingTile from "./assets/images/guest-placing-tile.jpg";
 
 // These are your existing pictures. Swap the imports above when new photos are ready.
-const EMAIL = "mosaicmeevents@gmail.com";
-// Stand-in until your Instagram profile URL is ready. Used in the menu and footer.
-const INSTAGRAM_URL = "https://www.instagram.com/";
 
 // Replace these four sources with your digital mosaic photos when ready.
 const digitalPhotos = [
@@ -27,10 +25,6 @@ const digitalPhotos = [
     alt: "A finished mosaic bringing photo memories together",
   },
 ];
-
-function emailLink(subject, lines) {
-  return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\r\n"))}`;
-}
 
 const weddingEnquiry = emailLink("Mosaic Me | Wedding enquiry", [
   "Hi Mosaic Me,",
@@ -327,11 +321,7 @@ function App() {
             <a href="#weddings" onClick={closeMenu}>
               Weddings
             </a>
-            <a
-              href="#digital-mosaics"
-              className="digital-nav-link"
-              onClick={closeMenu}
-            >
+            <a href="/digital" className="digital-nav-link" onClick={closeMenu}>
               Digital mosaics
             </a>
             <a href="#pricing" onClick={closeMenu}>
@@ -528,11 +518,8 @@ function App() {
               </p>
             </div>
             <DigitalCarousel />
-            <a
-              href={digitalEnquiry}
-              className="button button-accent digital-enquiry"
-            >
-              Enquire about a digital mosaic
+            <a href="/digital" className="button button-accent digital-enquiry">
+              Explore digital mosaics
             </a>
           </div>
         </section>
@@ -674,7 +661,7 @@ function App() {
             </div>
             <nav className="footer-links" aria-label="Footer navigation">
               <a href="#weddings">Weddings</a>
-              <a href="#digital-mosaics" onClick={closeMenu}>
+              <a href="/digital" onClick={closeMenu}>
                 Digital mosaics
               </a>
               <a href="#events">Other events</a>

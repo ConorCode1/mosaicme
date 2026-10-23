@@ -1,0 +1,3 @@
+# Keep direct visits and refreshes on the digital landing page working.
+/digital    /digital/index.html    200
+/digital/   /digital/index.html    200
