@@ -1,27 +1,33 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import finalMosaic from "./assets/images/final-mosaic.jpg";
-import heroMosaic from "./assets/images/hero-mosaic.jpg";
-import guestPlacingTile from "./assets/images/guest-placing-tile.jpg";
-import guestTakingPhoto from "./assets/images/guest-taking-photo.jpg";
-import tilePrinting from "./assets/images/tile-printing.jpg";
+import dara from "./assets/images/dara.jpg";
+import eiffel from "./assets/images/eiffel.jpg";
+import ep from "./assets/images/ep.jpg";
+import hammock from "./assets/images/hammock.jpg";
+import ryan from "./assets/images/ryan.jpg";
+import scot from "./assets/images/scot.jpg";
+import ski from "./assets/images/ski.jpg";
 
 // Temporary examples reuse existing files. Replace the sources and alt text
 // here with your digital artwork. Add or remove entries as your gallery grows.
 const photos = [
-  { src: finalMosaic, alt: "A personalised photo mosaic of a couple" },
+  { src: ski, alt: "A personalised photo mosaic of a couple" },
   {
-    src: guestPlacingTile,
+    src: scot,
     alt: "A close-up of the small photos that form a mosaic portrait",
   },
-  { src: heroMosaic, alt: "A couple looking at their photo mosaic" },
-  { src: guestTakingPhoto, alt: "A photo mosaic displayed at a celebration" },
+  { src: ryan, alt: "A couple looking at their photo mosaic" },
+  { src: ep, alt: "A photo mosaic displayed at a celebration" },
   {
-    src: tilePrinting,
+    src: hammock,
     alt: "Individual photos arranged into a larger portrait",
   },
   {
-    src: finalMosaic,
+    src: dara,
+    alt: "A finished portrait made from a collection of photos",
+  },
+  {
+    src: eiffel,
     alt: "A finished portrait made from a collection of photos",
   },
 ];
