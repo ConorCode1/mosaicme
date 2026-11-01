@@ -2,10 +2,10 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import dara from "./assets/images/dara.jpg";
 import eiffel from "./assets/images/eiffel.jpg";
-import ep from "./assets/images/ep.jpg";
+import ep from "./assets/images/ep-black.webp";
 import hammock from "./assets/images/hammock.jpg";
-import ryan from "./assets/images/ryan.jpg";
-import scot from "./assets/images/scot.jpg";
+import ryan from "./assets/images/ryan-black.webp";
+import scot from "./assets/images/scot-canvas.webp";
 import ski from "./assets/images/ski.jpg";
 
 // Temporary examples reuse existing files. Replace the sources and alt text
