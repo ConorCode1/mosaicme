@@ -1,12 +1,12 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import dara from "./assets/images/dara.jpg";
-import eiffel from "./assets/images/eiffel.jpg";
-import ep from "./assets/images/ep-black.webp";
+import eiffel from "./assets/images/paris-black.webp";
+import ep from "./assets/images/ep-black2.webp";
 import hammock from "./assets/images/hammock.jpg";
-import ryan from "./assets/images/ryan-black.webp";
+import ryan from "./assets/images/ryan-black2.webp";
 import scot from "./assets/images/scot-canvas.webp";
-import ski from "./assets/images/ski.jpg";
+import ski from "./assets/images/ski-black.webp";
 
 // Temporary examples reuse existing files. Replace the sources and alt text
 // here with your digital artwork. Add or remove entries as your gallery grows.
